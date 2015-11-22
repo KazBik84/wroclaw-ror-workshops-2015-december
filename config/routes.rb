@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   end
   resources :visitors, only: [:index]
 
-  get "reposts/subjects" => "reports#subjects"
+  get "report/subjects" => "reports#subjects"
 end
