@@ -3,7 +3,7 @@ rvm:
 services:
   - postgresql
 before_script:
-  - psql -c "CREATE SUPERUSER workshops;" -U postgres
+  - psql -c "CREATE USER workshops;" -U postgres
   - psql -c "ALTER USER workshops WITH SUPERUSER;" -U postgres  
   - psql -c 'create database workshops_test;' -U postgres
 addons:
