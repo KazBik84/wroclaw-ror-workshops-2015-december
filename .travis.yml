@@ -3,7 +3,7 @@ rvm:
 services:
   - postgresql
 before_script:
-  - psql -c "CREATE USER workshops;" -U postgres
+  - psql -c "createuser workshops -s;" -U postgres
   - psql -c 'create database workshops_test;' -U postgres
 addons:
   postgresql: '9.3'
