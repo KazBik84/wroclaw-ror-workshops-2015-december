@@ -1,8 +1,6 @@
 ### Status
 
-[![Build Status](https://travis-ci.org/KazBik84/wroclaw-ror-workshops-2015-december
-.svg?branch=master)](https://travis-ci.org/KazBik84/wroclaw-ror-workshops-2015-december
-)
+[![Build Status](https://travis-ci.org/KazBik84/wroclaw-ror-workshops-2015-december.svg?branch=master)](https://travis-ci.org/KazBik84/wroclaw-ror-workshops-2015-december)
 
 RoR Workshops
 ================
