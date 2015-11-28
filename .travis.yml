@@ -5,6 +5,6 @@ services:
 before_script:
   - psql -c "CREATE USER workshops;" -U postgres
   - psql -c "ALTER USER workshops WITH SUPERUSER;" -U postgres  
-  - cp config/database.yml.travis config/database.yml
+  - cp config/database.yml.sample config/database.yml
 addons:
   postgresql: '9.3'
