@@ -4,12 +4,3 @@
   - subject_items.each do |subject_item|
     .subject-item
       = render 'subject_item', subject_item: subject_item
-.birthdates
-  list of birthdats:
-  %ul 
-    - students.each do |student|
-      - if !student.birthdate.nil? 
-        %li
-          = student.decorate.full_name 
-          = student.birthdate.strftime("%Y-%m_%d")
-
