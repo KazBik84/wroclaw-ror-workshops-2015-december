@@ -10,5 +10,6 @@
       %tr
         %td
           = student.decorate.full_name
-          = student.birthdate
+          - unless student.birthdate.nil?
+            = student.birthdate.strftime("%Y-%m_%d")
         %td= student.decorate.avg_notes(subject_item)
