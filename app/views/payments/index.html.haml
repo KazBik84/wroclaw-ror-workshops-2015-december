@@ -1,0 +1,15 @@
+- breadcrumb :student_payments, student
+
+- @payments.each do |payment|
+  %strong
+    Name:
+  = student.decorate.full_name
+  %br
+  %strong
+    Date:
+  = payment.date
+  %br
+  %strong
+    Amount:
+  = payment.amount
+  %hr
