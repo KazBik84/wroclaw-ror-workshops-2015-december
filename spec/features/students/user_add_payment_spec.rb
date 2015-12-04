@@ -14,7 +14,7 @@ feature "User add payment to the student" do
   scenario "Page should have proper breadscrumb" do
     within('.breadcrumbs') do
 
-      expect(page).to have_content('RoR Workhops » Students » Jan Nowak payments')
+      expect(page).to have_content('RoR Workhops » Students » Krzysztof Jerzyna new payment')
     end
   end
     
