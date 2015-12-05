@@ -46,3 +46,8 @@ end
 crumb :payments_list do
   link t('navbar.payments'), payments_list_path
 end
+
+crumb :payment do |student, payment|
+  link "#{student.first_name} #{student.last_name} payment", student_payment_path(student, payment)
+  parent :payments_list
+end
