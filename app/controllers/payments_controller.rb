@@ -12,6 +12,7 @@ class PaymentsController < ApplicationController
   end
 
   def new
+      @payment = student.payments.new
   end
 
   def create
