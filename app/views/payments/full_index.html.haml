@@ -26,7 +26,7 @@
           %td 
             - if month.detect { |date| date[:student_id] == obj.id }
               - payment = month.detect { |date| date[:student_id] == obj.id }
-              = payment[:date]
+              = link_to payment[:date], student_payment_path(obj.id, payment.id)
             - else
               no
     
