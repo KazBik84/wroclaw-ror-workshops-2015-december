@@ -1,5 +1,8 @@
 class PaymentsController < ApplicationController
   expose(:student) { Student.find(params[:student_id])}
+
+  before_action :authenticate_user!, only: [:full_index]
+
   def index
     @payments = Payment.where(student_id: student).order(:date)
   end
@@ -16,7 +19,7 @@ class PaymentsController < ApplicationController
     if @payment.save
       redirect_to students_path, notice: I18n.t('shared.created', resource: 'Payment')
     else
-      redirect_to students_path
+      render :new
     end
   end
 
