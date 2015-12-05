@@ -5,7 +5,7 @@ class PaymentsController < ApplicationController
   end
 
   def show
-    @payment = Payment.where(id: params[:id])
+    @payment = Payment.find(params[:id])
   end
 
   def new
