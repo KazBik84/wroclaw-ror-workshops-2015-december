@@ -1,0 +1,32 @@
+- breadcrumb :payments_list
+
+%table.table.table-condensed#student_payments
+  %thead
+    %tr
+      %th= t('student.columns.first_name')
+      %th= t('student.columns.last_name')
+      %th= "January"
+      %th= "February"
+      %th= "March"
+      %th= "April"
+      %th= "May"
+      %th= "June"
+      %th= "July"
+      %th= "August"
+      %th= "September"
+      %th= "October"
+      %th= "November"
+      %th= "December"
+  %tbody
+    - @students.each do |obj|
+      %tr
+        %td= obj.first_name
+        %td= obj.last_name
+        - @months.each do |month|
+          %td 
+            - if month.detect { |date| date[:student_id] == obj.id }
+              - payment = month.detect { |date| date[:student_id] == obj.id }
+              = link_to payment[:date], student_payment_path(obj.id, payment.id)
+            - else
+              no
+    

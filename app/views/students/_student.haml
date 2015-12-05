@@ -14,3 +14,10 @@
     = link_to student_subjects_path(student), { title: t('shared.show_subject_items') } do
       %button.btn.btn-default
         = fa_icon "list"
+    = link_to student_payments_path(student), { title: t('shared.show_payments') } do
+      %button.btn.btn-default
+        = fa_icon "bar-chart"        
+    = link_to new_student_payment_path(student), { title: t('shared.add_payment') } do
+      %button.btn.btn-default
+        = fa_icon "usd"
+

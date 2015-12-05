@@ -1,0 +1,15 @@
+- breadcrumb :payment, student, @payment
+
+%strong
+  Send_by:
+= student.decorate.full_name
+%br
+%strong
+  Date: 
+=@payment.date
+%br
+%strong
+  Ammount:
+=@payment.amount
+%br
+= link_to 'Back', payments_list_path

@@ -7,6 +7,7 @@ en:
     logout: Logout
     signin: Sign in
     signup: Sign up
+    payments: Students Payments
   shared:
     created: "%{resource} has been created!"
     updated: "%{resource} has been updated!"
@@ -19,6 +20,8 @@ en:
     back: Back
     add_new_item: Add new one
     subjects: subjects
+    show_payments: Show payments
+    add_payment: Add payment
   student:
     columns:
       first_name: first name

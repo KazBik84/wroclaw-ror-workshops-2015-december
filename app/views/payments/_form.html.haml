@@ -1,0 +1,5 @@
+= simple_form_for [student, @payment] do |f|
+  = f.input :date, as: :date, order: [:year, :month, :day], start_year: Date.today.year, end_year: Date.today.year - 90
+  = f.input :amount, as: :integer
+  = link_to t('shared.back'), students_path, class: 'btn btn-default'
+  = f.button :submit

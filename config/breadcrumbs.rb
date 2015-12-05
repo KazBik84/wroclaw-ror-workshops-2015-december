@@ -15,6 +15,16 @@ crumb :student_subjects do |student|
   parent :students
 end
 
+crumb :student_payments do |student|
+  link "#{student.first_name} #{student.last_name} payments", student_payments_path(student)
+  parent :students
+end
+
+crumb :student_new_payment do |student|
+  link "#{student.first_name} #{student.last_name} new payment", new_student_payment_path(student)
+  parent :students
+end
+
 crumb :teachers do
   link t('navbar.teachers'), teachers_path
 end
@@ -31,4 +41,13 @@ end
 
 crumb :subjects do
   link t('navbar.reports_subjects'), report_subjects_path
+end
+
+crumb :payments_list do
+  link t('navbar.payments'), payments_list_path
+end
+
+crumb :payment do |student, payment|
+  link "#{student.first_name} #{student.last_name} payment", student_payment_path(student, payment)
+  parent :payments_list
 end

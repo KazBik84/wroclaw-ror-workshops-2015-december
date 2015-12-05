@@ -7,5 +7,7 @@ before_script:
   - psql -c "ALTER USER workshops WITH SUPERUSER;" -U postgres  
   - psql -c 'create database workshops_test;' -U postgres
   - cp config/database.yml.sample config/database.yml
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start 
 addons:
   postgresql: '9.3'
