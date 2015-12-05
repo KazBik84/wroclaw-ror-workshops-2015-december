@@ -1,4 +1,4 @@
-= simple_form_for [student, student.payments.new] do |f|
+= simple_form_for [student, @payment] do |f|
   = f.input :date, as: :date, order: [:year, :month, :day]
   = f.input :amount, as: :integer
   = link_to t('shared.back'), students_path, class: 'btn btn-default'
