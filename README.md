@@ -1,3 +1,10 @@
+### Autor: 
+Kazimierz Bik
+
+### Applink:
+
+http://powerful-bastion-1532.herokuapp.com/
+
 ### Status
 
 [![Build Status](https://travis-ci.org/KazBik84/wroclaw-ror-workshops-2015-december.svg?branch=master)](https://travis-ci.org/KazBik84/wroclaw-ror-workshops-2015-december)
