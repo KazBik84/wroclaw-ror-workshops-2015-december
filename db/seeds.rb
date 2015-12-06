@@ -48,4 +48,13 @@ SubjectItem.all.each do |subject_item|
   end
 end
 
+students.each do |student|
+  month_array = (1..12).to_a.shuffle
+  rand(1..12).times do |payment|
+    rand_month = month_array.pop
+    rand_day = rand(1..31)
+    student.payments.create( {date: "2015-#{rand_month}-#{rand_day}", amount: "100" } )  
+  end
+end
+
 puts "Seeds: done"
