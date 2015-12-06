@@ -36,3 +36,10 @@ en:
     columns:
       full_name: Full name
       avg_notes: Notes avarange
+  payments:
+    columns:
+      full_name: Full name
+      date: Date
+      amount: Amount
+
+
