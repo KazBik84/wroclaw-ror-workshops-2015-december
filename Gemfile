@@ -21,6 +21,7 @@ gem 'dotenv-rails'
 gem 'gretel'
 gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 gem 'jquery-ui-rails'
+gem 'faker'
 
 group :development do
   gem 'better_errors'
@@ -34,7 +35,6 @@ end
 group :development, :test do
   gem 'byebug'
   gem 'factory_girl_rails'
-  gem 'faker'
   gem 'rspec-rails'
   gem 'spring'
   gem 'web-console', '~> 2.0'
