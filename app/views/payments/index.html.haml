@@ -1,15 +1,12 @@
 - breadcrumb :student_payments, student
 
-- @payments.each do |payment|
-  %strong
-    Name:
-  = student.decorate.full_name
-  %br
-  %strong
-    Date:
-  = payment.date
-  %br
-  %strong
-    Amount:
-  = payment.amount
-  %hr
+%table.table.table-condensed
+  %thead
+    %tr
+      %th= t('payments.columns.date')
+      %th= t('payments.columns.amount')
+  %tbody
+    - @payments.each do |payment|
+      %tr
+        %td= payment.date
+        %td= payment.amount
